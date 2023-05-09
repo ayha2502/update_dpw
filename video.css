@@ -1,14 +1,3 @@
-*{
-    margin: 0; padding: 0;
-    box-sizing: border-box;
-    text-transform: capitalize;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: normal;
-}
-
-body{
-    background: #eee;
-}
 
 .heading{
     color: #444;
@@ -17,7 +6,7 @@ body{
     padding: 10px;
 }
 
-.container{
+.containers{
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 15px;
@@ -25,51 +14,51 @@ body{
     padding: 5px 5%;
 }
 
-.container .main-video{
-    width: 100%;
+.containers .main-video{
+    width: 90%;
     border-radius: 5px;
     padding: 10px;
 }
 
-.container .main-video video{
+.containers .main-video video{
     width: 100%;
     border-radius: 5px;
 }
 
-.container .main-video .title{
+.containers .main-video .title{
     color: #333;
     font-size: 23px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
-.container .video-list{
+.containers .video-list{
     background: #fff;
     border-radius: 5px;
     height: 520px;
     overflow-y: scroll;
 }
 
-.container .video-list::-webkit-scrollbar{
+.containers .video-list::-webkit-scrollbar{
     width: 7px;
 }
 
-.container .video-list::-webkit-scrollbar-track{
+.containers .video-list::-webkit-scrollbar-track{
     background: #ccc;
     border-radius: 50px;
 }
 
-.container.video-list::-webkit-scrollbar-track{
+.containers.video-list::-webkit-scrollbar-track{
     background: #666;
     border-radius: 50px;
 }
 
-.container .video-list .vid video{
+.containers .video-list .vid video{
     width: 100px;
     border-radius: 5px;
 }
 
-.container .video-list .vid{
+.containers .video-list .vid{
     display: flex;
     align-items: center;
     gap: 15px;
@@ -81,20 +70,20 @@ body{
     cursor: pointer;
 }
 
-.container.video-list ,.vid:hover{
+.containers.video-list ,.vid:hover{
     background: #eee;
 }
 
-.container.video-list ,.vid.active{
+.containers.video-list ,.vid.active{
     background: #2980b9;
 }
 
-.container.video-list ,.vid.active .title{
+.containers.video-list ,.vid.active .title{
     background: #fff;
 }
 
-.container.video-list ,.vid .title{
-    background: #333;
+.containers.video-list ,.vid .title{
+    background: #fff;
     font-size: 17px;
 }
 
@@ -324,4 +313,23 @@ footer {
 
 .link{
     font-size: medium;
+}
+.banner{
+    background-image: url('ft1.jpg');
+    height: 45vh;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0,0, .6);
 }
